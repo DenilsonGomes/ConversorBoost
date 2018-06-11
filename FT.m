@@ -18,7 +18,7 @@ denf = [C*L L/Ro (1-D)^2];
 F = tf(numf, denf) %Função transferencia da planta
 
 H = Vref/Vout; %Sensor
-fm = 1/15; % Amplitudedo sinal de PWM
+fm = 1/3.3; % Inverso da amplitude do sinal de PWM
 FTMA = F*H*fm; %Função tranferencia de malha aberta
 
 bode(FTMA)
