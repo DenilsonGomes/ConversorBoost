@@ -21,8 +21,8 @@ denf = [C*L , L / Ro ,( 1- D) ^ 2]; %Denominador
 F = tf (numf, denf) %função transferencia da planta
 
 H = Vref / Vout; % Sensor
-fm = 1 / 5; % Inversão da amplitude do sinal de PWM
+fm = 1 / 3.3; % Inverso da amplitude do sinal de PWM
 FTMA = F * H * fm; % De Tranferencia de malha aberta
 
 bode (FTMA) %Diagrama de Bode
-pidtune(FTMA,'pid') %Calculo do controlador PID
+Control = pidtune(FTMA,'pid') %Calculo do controlador PID
