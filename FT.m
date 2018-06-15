@@ -8,15 +8,15 @@ clc
 
 % Entre com parametros
 Vi = 15 ; %Tensao de entrada
-Vout = 30;
-Vref = 3 ;
-L = 937e-6 ;
-Ro = 10 ;
-D = 0.5 ;
-C = 330e-6 ;
+Vout = 30; %Tensao de saida
+Vref = 3 ; %Tensao de referencia
+L = 937e-6 ; %Indutancia
+Ro = 10 ; %Carga
+D = 0.5 ; %Duty-Cycle
+C = 330e-6 ; %Capacitancia
 
-numf = [-(Vi * L / (Ro * ( 1 -D) ^ 2)), Vi];
-denf = [C*L , L / Ro ,( 1- D) ^ 2];
+numf = [-(Vi * L / (Ro * ( 1 -D) ^ 2)), Vi]; %Numerador
+denf = [C*L , L / Ro ,( 1- D) ^ 2]; %Denominador
 
 F = tf (numf, denf) %função transferencia da planta
 
@@ -24,5 +24,5 @@ H = Vref / Vout; % Sensor
 fm = 1 / 5; % Inversão da amplitude do sinal de PWM
 FTMA = F * H * fm; % De Tranferencia de malha aberta
 
-bode (FTMA)
-pidtune(FTMA,'pid')
+bode (FTMA) %Diagrama de Bode
+pidtune(FTMA,'pid') %Calculo do controlador PID
