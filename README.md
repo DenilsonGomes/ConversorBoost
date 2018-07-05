@@ -1,10 +1,10 @@
 ***
-<h1 align="right" > Temporizador de Proposito Geral
+<h1 align="right" > Controle de Conversor Boost
 
 <br>
 <br>
 
-<h2 align="right" >Denilson Gomes Vaz da Silva<br>
+<h2 align="right" >Universidade Federal do Ceará<br>
 <br>
 <br>
 
