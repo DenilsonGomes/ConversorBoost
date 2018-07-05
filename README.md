@@ -1,4 +1,4 @@
-Controle de Conversor Boost
+#Controle de Conversor Boost
 
 Esse projeto conta com dois arquivos. Um arquivo Matlab para
 a manipulação dos dados do conversor para a obtenção da Funçao 
