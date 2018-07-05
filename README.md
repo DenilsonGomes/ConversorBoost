@@ -1,4 +1,7 @@
+***
 <h1 align="right" > Controle de Conversor Boost
+
+<br>
 <br>
 
 Esse projeto conta com dois arquivos. Um arquivo Matlab para
